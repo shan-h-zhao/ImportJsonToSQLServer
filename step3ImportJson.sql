@@ -1,7 +1,7 @@
 Declare @JSON varchar(max)
 SELECT @JSON=BulkColumn
 
-FROM OPENROWSET (BULK 'C:\Users\shz16118.UCONN\Downloads\results\vm20210105.json', SINGLE_CLOB) import
+FROM OPENROWSET (BULK 'C:\Users\your dir\Downloads\results\vm20210105.json', SINGLE_CLOB) import
 SELECT 
 	DataPoints.dataPointId, DataPoints.journeyId, DataPoints.capturedTimestamp, 
 	Locations.latitude, Locations.longitude, Locations.geohash, Locations.postalCode, Locations.regionCode, Locations.countryCode,
